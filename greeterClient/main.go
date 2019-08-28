@@ -36,6 +36,6 @@ func main() {
 		if err != nil {
 			log.Fatalf("could not greet: %v", err)
 		}
-		log.Println(r.Receive)
+		log.Print(r.Receive)
 	}
 }

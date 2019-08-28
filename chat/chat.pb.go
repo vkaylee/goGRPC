@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// The request message containing the user's name.
+// The request message containing the name and message
 type MessageRequest struct {
 	Name                 string   `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 	Message              string   `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
@@ -72,7 +72,7 @@ func (m *MessageRequest) GetMessage() string {
 	return ""
 }
 
-// The response message containing the greetings
+// The response message containing the status
 type MessageResponse struct {
 	Receive              bool     `protobuf:"varint,1,opt,name=receive,proto3" json:"receive,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
