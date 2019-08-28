@@ -8,13 +8,13 @@ service Greeter {
     rpc SendMessage (MessageRequest) returns (MessageResponse) {}
 }
 
-// The request message containing the user's name.
+// The request message containing the name and message
 message MessageRequest {
     string name = 1;
     string message = 2;
 }
 
-// The response message containing the greetings
+// The response message containing the status
 message MessageResponse {
     bool receive = 1;
 }
