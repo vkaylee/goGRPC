@@ -18,7 +18,7 @@ const (
 // server is used to implement chat.GreeterServer.
 type server struct{}
 
-// SayHello implements chat.GreeterServer
+// SendMessage implements chat.GreeterServer
 func (s *server) SendMessage(ctx context.Context, in *pb.MessageRequest) (*pb.MessageResponse, error) {
 	log.Printf("Message from %v : %v", in.Name, in.Message)
 	return &pb.MessageResponse{Receive: true}, nil
